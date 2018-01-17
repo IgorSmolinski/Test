@@ -2,7 +2,9 @@ package com.kodilla.testing;
 
 
 import com.kodilla.testing.user.SimpleUser;
-import com.kodilla.testing.calculator.Calc;
+
+import static com.kodilla.testing.calculator.Calc.add;
+import static com.kodilla.testing.calculator.Calc.substract;
 
 public class TestingMain {
     public static void main(String[] args){
@@ -16,9 +18,8 @@ public class TestingMain {
             System.out.println("Error!");
         }
 
-        Calc newCalculator = new Calc(2,3);
 
-        int result2 = newCalculator.add(newCalculator.getA(), newCalculator.getB());
+        int result2 = add(2, 3);
 
         if (result2==5){
             System.out.println("Adding test complete, everything is O.K.");
@@ -27,7 +28,7 @@ public class TestingMain {
             System.out.println("Adding test error");
         }
 
-        result2 = newCalculator.substract(newCalculator.getA(), newCalculator.getB());
+        result2 = substract(2,3);
 
         if (result2==-1){
             System.out.println("Substraction test complete, everything is O.K.");
