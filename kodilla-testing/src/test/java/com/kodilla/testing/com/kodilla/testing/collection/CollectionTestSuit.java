@@ -1,9 +1,12 @@
 package com.kodilla.testing.com.kodilla.testing.collection;
 
+
 import com.kodilla.testing.collection.OddNumbersExtreminator;
 import org.junit.*;
 
 import java.util.ArrayList;
+
+
 
 
 public class CollectionTestSuit {
@@ -32,10 +35,9 @@ public class CollectionTestSuit {
     public void testOddNumbersExterminatorEmptyList() {
         //Given
         ArrayList<Integer> testingList = new ArrayList<>();
-        OddNumbersExtreminator newOne = new OddNumbersExtreminator(testingList);
         //When
-        boolean result = newOne.getList().isEmpty();
-        System.out.println("Testing is ArrayList is empty.");
+        boolean result = testingList.isEmpty();
+        System.out.println("Testing is Arrgit sayList is empty.");
         //Then
         Assert.assertEquals(true, result);
     }
@@ -57,9 +59,8 @@ public class CollectionTestSuit {
         testingOddList.add(4);
         testingOddList.add(6);
         testingOddList.add(8);
-        OddNumbersExtreminator newOne = new OddNumbersExtreminator(testingList);
         //When
-        ArrayList<Integer> example = newOne.extreminate(testingList);
+        ArrayList<Integer> example = OddNumbersExtreminator.exterminate(testingList);
 
         System.out.println("Testing if exterminate method from Class OddNumbersExterminator working properly");
         //Then
