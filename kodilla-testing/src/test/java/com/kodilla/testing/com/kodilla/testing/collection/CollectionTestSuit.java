@@ -55,10 +55,10 @@ public class CollectionTestSuit {
         testingList.add(6);
         testingList.add(7);
         testingList.add(8);
-        testingOddList.add(2);
-        testingOddList.add(4);
-        testingOddList.add(6);
-        testingOddList.add(8);
+        testingOddList.add(1);
+        testingOddList.add(3);
+        testingOddList.add(5);
+        testingOddList.add(7);
         //When
         ArrayList<Integer> example = OddNumbersExtreminator.exterminate(testingList);
 

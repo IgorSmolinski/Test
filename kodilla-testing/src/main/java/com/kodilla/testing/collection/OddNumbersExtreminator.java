@@ -9,7 +9,7 @@ public class OddNumbersExtreminator {
         ArrayList<Integer> oddNumbersList = new ArrayList<>();
 
         for (Integer odds: numbers ){
-            if (odds%2 == 0){
+            if (odds%2 != 0){
                 oddNumbersList.add(odds);
             }
         }
