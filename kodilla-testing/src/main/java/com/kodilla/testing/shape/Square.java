@@ -1,6 +1,6 @@
 package com.kodilla.testing.shape;
 
-
+import static java.lang.Math.pow;
 
 class Square implements Shape{
     String name = "Squere";
@@ -12,19 +12,22 @@ class Square implements Shape{
 
     @Override
     public String getShapeName(){
-     return "SMTH";
+     return name;
     }
 
     @Override
     public double getField(){
-        return 0;
+        return pow(a,2);
     }
 
-    public String getName() {
-        return name;
-    }
 
     public double getA() {
         return a;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
+
+

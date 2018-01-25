@@ -10,17 +10,21 @@ public class Triangel implements Shape{
         this.h = h;
     }
 
-    public String getName() {
-        return name;
-    }
-
     @Override
     public String getShapeName() {
-        return getName();
+        return name;
     }
 
     @Override
     public double getField() {
         return a*1/2*h;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public double getH() {
+        return h;
     }
 }

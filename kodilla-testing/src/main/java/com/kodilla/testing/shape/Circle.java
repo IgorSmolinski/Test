@@ -1,5 +1,7 @@
 package com.kodilla.testing.shape;
 
+import static java.lang.Math.*;
+
 public class Circle implements Shape{
     String name="circle";
     double r;
@@ -10,16 +12,12 @@ public class Circle implements Shape{
 
     @Override
     public double getField() {
-        return 0;
+        return Math.PI*Math.pow(r, 2);
     }
 
     @Override
     public String getShapeName(){
-        return "SMTH";
-    }
-
-    public Circle(String name) {
-        this.name = name;
+        return name;
     }
 
     public double getR() {

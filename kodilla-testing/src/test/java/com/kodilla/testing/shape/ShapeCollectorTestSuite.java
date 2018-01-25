@@ -4,8 +4,12 @@ import com.kodilla.testing.shape.ShapeCollector;
 import com.kodilla.testing.shape.Circle;
 import com.kodilla.testing.shape.Square;
 import com.kodilla.testing.shape.Triangel;
+import org.junit.runners.model.Statement;
+import org.junit.runner.Description;
 
 import org.junit.*;
+
+import static com.kodilla.testing.shape.ShapeCollector.*;
 
 public class ShapeCollectorTestSuite {
 
@@ -50,10 +54,10 @@ public class ShapeCollectorTestSuite {
         newShape.addFigure(testTriangle);
 
         //When
-        ShapeCollector testingShape = newShape.getFigure(0);
+        Shape testingShape = newShape.getFigure(0);
 
         //Then
-        Assert.assertEquals(newShape, testingShape);
+        Assert.assertEquals(testTriangle, testingShape);
     }
 
     @Test
@@ -61,9 +65,9 @@ public class ShapeCollectorTestSuite {
         //Given
         Square testSquare = new Square(4);
         ShapeCollector newShape = new ShapeCollector();
-
         //When
         boolean result = newShape.removeFigure(testSquare);
+        System.out.println(" Wynik result "+ result);
 
         //Then
         Assert.assertFalse(result);
@@ -84,14 +88,16 @@ public class ShapeCollectorTestSuite {
         Assert.assertEquals(0, newShape.getListQuantity());
     }
 
+
+
     @Test
     public void testShowingShape(){
         //Given
         Square newSquare = new Square(2);
-        ShapeCollector newShape = new ShapeCollector();
 
         //When
-        Shape testShape = (Shape) newShape;
+
+        Shape testShape = newSquare;
         String shapeName= testShape.getShapeName();
         double shapeField=testShape.getField();
 
