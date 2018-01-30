@@ -31,8 +31,8 @@ public class ShapeCollector {
         return example;
     }
 
-    public void showFigures(){                       //  Żeby przetestować tą metodę chciałem skorzystać z Klasy OutputCapture
-        for (Shape temp : shapes){                  //  Nie udało mi się jej zaimportować.
+    public void showFigures(){
+        for (Shape temp : shapes){
              System.out.println(temp.getShapeName());
             System.out.println(temp.getField());
         }
