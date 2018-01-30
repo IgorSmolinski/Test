@@ -3,8 +3,8 @@ package com.kodilla.testing.shape;
 import static java.lang.Math.pow;
 
 class Square implements Shape{
-    String name = "Squere";
-    double a;
+    private String name = "Squere";
+    private double a;
 
     public Square(double a) {
         this.a = a;

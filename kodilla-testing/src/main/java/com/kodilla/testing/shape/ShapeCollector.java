@@ -6,21 +6,14 @@ import java.util.ArrayList;
 public class ShapeCollector {
 
     private ArrayList<Shape> shapes = new ArrayList<>();
-    static int listcounter = 0;
 
     public void addFigure(Shape shape){
         shapes.add(shape);
-        listcounter++;
-
-        System.out.println("Element on the list:" + listcounter );
+        System.out.println("Element on the list:" + shapes.size());
     }
 
     public boolean removeFigure(Shape shape){
-        boolean result = false;
-        if(shapes.contains(shape)){
-            shapes.remove(shape);
-            result=true;
-        }
+        boolean result = shapes.remove(shape);
         return result;
 
     }

@@ -2,8 +2,8 @@ package com.kodilla.testing.shape;
 
 
 public class Triangel implements Shape{
-    String name = "Triangel";
-    double a,h;
+    private String name = "Triangel";
+    private double a,h;
 
     public Triangel(double a, double h) {
         this.a = a;
