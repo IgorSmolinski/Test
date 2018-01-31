@@ -26,11 +26,15 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+}
+
+dependencies {
+    testCompile ('junit:junit:4.12')
+}
+
+dependencies {
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.0'
 }
 
 apply plugin: 'java'
-
-dependencies {
-	testCompile 'junit:junit:4.12'
-}
-
