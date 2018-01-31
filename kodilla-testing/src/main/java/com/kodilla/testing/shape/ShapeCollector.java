@@ -13,8 +13,7 @@ public class ShapeCollector {
     }
 
     public boolean removeFigure(Shape shape){
-        boolean result = shapes.remove(shape);
-        return result;
+        return shapes.remove(shape);
 
     }
 
