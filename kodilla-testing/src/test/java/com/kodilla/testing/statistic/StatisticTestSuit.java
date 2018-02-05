@@ -45,7 +45,7 @@ public class StatisticTestSuit {
             i++;
         }
         while (i!=100);
-
+        //Given
         when(stats.usersNames()).thenReturn(somelist);
         when(stats.commentsCount()).thenReturn(100);
         when(stats.postsCount()).thenReturn(50);
