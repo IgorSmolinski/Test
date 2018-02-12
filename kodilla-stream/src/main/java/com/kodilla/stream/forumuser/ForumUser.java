@@ -3,10 +3,10 @@ package com.kodilla.stream.forumuser;
 import java.time.LocalDate;
 
 public class ForumUser {
-    int id, quantityOfPosts;
-    String userName;
-    char sex;
-    LocalDate birthday;
+    private int id, quantityOfPosts;
+    private String userName;
+    private char sex;
+    private LocalDate birthday;
 
     public ForumUser(int id, int quantityOfPosts, String userName, char sex, int year, int month, int day) {
         this.id = id;
