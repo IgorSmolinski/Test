@@ -162,8 +162,40 @@ public class boardTestSuit {
                 .sum()/project.getTaskLists().stream().filter(inProgressList::contains).flatMap(a->a.getTasks().stream()).count();
 
 
+
+        /*double aver = LongStream.range(0 , project.getTaskLists().stream()
+                .filter(inProgressList::contains)
+                .flatMap(a->a.getTasks().stream())
+                .count())
+                .flatMap(a->project.getTaskLists().stream()
+                        .filter(inProgressList::contains)
+                        .flatMap(b->b.getTasks().stream())
+                        .map(c->c.getCreated())
+                        .map(c->c.until(tempDate,ChronoUnit.DAYS))
+                        .mapToLong(c->c.longValue()))
+                        .average();
+*/
+
+
+        double aver2 = project.getTaskLists().stream()
+                .filter(inProgressList::contains)
+                .flatMap(a -> a.getTasks().stream())
+                .map(Task::getCreated)
+                .mapToLong(c -> c.until(tempDate, ChronoUnit.DAYS)).average().orElse(0);
+
+
+        double ducking2 =project.getTaskLists().stream()
+                .filter(inProgressList::contains)
+                .flatMap(a->a.getTasks().stream())
+                .map(Task::getCreated)
+                .map(a->a.until(tempDate, ChronoUnit.DAYS))
+                .mapToLong(a->a.longValue()).average().orElse(0);
+
+
         //Then
         Assert.assertEquals(10, ducking, 0.0);
+        Assert.assertEquals(10, aver2, 0.0);
+        Assert.assertEquals(10,ducking2,0.0);
 
 
 
